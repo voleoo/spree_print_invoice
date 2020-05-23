@@ -54,6 +54,7 @@ RSpec.describe Spree::BookkeepingDocument do
 
   describe 'creation' do
     let(:printable) { create :order_ready_to_ship }
+    # let(:printable) { create :invoiceable_order }
     let(:pdf) { Spree::BookkeepingDocument.new(printable: printable, template: 'invoice') }
 
     before do
